@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include<locale.h>
 
 int main(){
+  setlocale(LC_ALL, "Portuguese");
 
-    float n1, n2, n3, respMedia;
+    int numero;
 
-    printf("Digite a primeira nota: ");
-    scanf("%f", &n1);
-    printf("Digite a segunda nota: ");
-    scanf("%f", &n2);
-    printf("Digite a terceira nota: ");
-    scanf("%f", &n3);
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
 
-    respMedia = (n1 + n2 + n3) /3;
-    printf("A media das notas são: %.2f", respMedia);
+    if (numero % 5 == 0) {
+        printf("O numero %d é multiplo de 5.\n", numero);
+    } else {
+        printf("O numero %d nao é multiplo de 5.\n", numero);
+    }
 
-    system("pause");
     return 0;
 }
